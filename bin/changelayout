@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Get the list of available X11 keymap layouts
+available_layouts=$(localectl list-x11-keymap-layouts)
+
+# Display Rofi menu to select a layout
+selected_layout=$(echo "$available_layouts" | rofi -dmenu -p "Select keyboard layout:")
+
+# Validate if the selected layout is in the list of available layouts
+if echo "$available_layouts" | grep -q "^$selected_layout$"; then
+    # Set the selected layout using setxkbmap
+    setxkbmap "$selected_layout"
+fi

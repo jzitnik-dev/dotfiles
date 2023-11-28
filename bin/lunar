@@ -1,0 +1,1 @@
+__GL_THREADED_OPTIMIZATIONS=0 lunarclient

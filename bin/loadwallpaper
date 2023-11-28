@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Set the path to your wallpapers folder
+WALLPAPERS_DIR="$HOME/wallpapers"
+
+# Get a random image from the wallpapers folder
+random_image=$(ls $WALLPAPERS_DIR | shuf -n 1)
+
+#echo $random_image
+# Set the selected image as the wallpaper for all screens using feh
+feh --bg-scale "$WALLPAPERS_DIR/$random_image"
