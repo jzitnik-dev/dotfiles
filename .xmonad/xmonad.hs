@@ -323,6 +323,7 @@ myManageHook = fullscreenManageHook <+> manageDocks <+> composeAll
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
     , resource  =? "kdesktop"       --> doIgnore
+    , className =? "Alacritty" --> doFullFloat
     , isFullscreen --> doFullFloat
                                  ]
 
