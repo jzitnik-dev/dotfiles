@@ -1,1 +1,0 @@
-curl -d $1 ntfy.sh/jzitnik
