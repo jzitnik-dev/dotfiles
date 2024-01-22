@@ -78,11 +78,11 @@ alias vi='nvim'
 # Use the best version of pico installed
 edit ()
 {
-	nano -c "$@"
+	nvim "$@"
 }
 sedit ()
 {
-	sudo nano -c "$@"
+	sudo nvim "$@"
 }
 
 # Extracts any archive(s) (if unp isn't installed)
@@ -185,10 +185,6 @@ trim()
 	echo -n "$var"
 }
 
-
-
-
-
 eval "$(starship init bash)"
 if [ -f "/usr/share/autojump/autojump.sh" ]; then
 	. /usr/share/autojump/autojump.sh
@@ -198,7 +194,10 @@ else
 	echo "can't found the autojump script"
 fi
 
+
 if [ -f /etc/bash.command-not-found ]; then
     . /etc/bash.command-not-found
 fi
+
+
 rm -rf ~/.temp_session/*
