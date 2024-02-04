@@ -2,6 +2,6 @@
 # ~/.bash_profile
 #
 
-startx
+# startx
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
