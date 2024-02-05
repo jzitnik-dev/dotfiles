@@ -1,0 +1,1 @@
+If using xmonad, rename the folders so there is not: .xmonad at the end.
