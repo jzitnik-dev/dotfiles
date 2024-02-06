@@ -109,18 +109,18 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_Left),    shiftToPrev)
 
     -- launch rofi
-    , ((modm,               xK_o     ), spawn "rofi -show drun")
-    , ((modm .|. shiftMask, xK_o),  spawn "rofi -show run")
-    , ((modm .|. shiftMask, xK_Tab),  spawn "rofi -show window")
-    , ((modm .|. controlMask, xK_e),  spawn "rofi -show emoji")
-    , ((modm,               xK_c),  spawn "rofi -show calc")
-    , ((modm .|. shiftMask, xK_s),  spawn "rofi -show ssh")
-    , ((modm .|. controlMask, xK_k),  spawn "~/bin/rofi-kill")
-    , ((modm .|. controlMask, xK_m),  spawn "~/bin/rofi-man")
-    , ((modm .|. controlMask, xK_w),  spawn "~/bin/rofi-websearch")
+    , ((modm,               xK_o     ), spawn "rofi -show drun -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. shiftMask, xK_o),  spawn "rofi -show run -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. shiftMask, xK_Tab),  spawn "rofi -show window -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. controlMask, xK_e),  spawn "rofi -show emoji -theme .config/rofi.xmonad/config.rasi")
+    , ((modm,               xK_c),  spawn "rofi -show calc -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. shiftMask, xK_s),  spawn "rofi -show ssh -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. controlMask, xK_k),  spawn "~/bin/rofi-kill -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. controlMask, xK_m),  spawn "~/bin/rofi-man -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. controlMask, xK_w),  spawn "~/bin/rofi-websearch -theme .config/rofi.xmonad/config.rasi")
 
     -- Select audio output
-    , ((modm              , xK_s),  spawn "rofi -show rofi-sound -modi rofi-sound:~/bin/rofi-sound-output-chooser")
+    , ((modm              , xK_s),  spawn "rofi -show rofi-sound -modi rofi-sound:~/bin/rofi-sound-output-chooser -theme .config/rofi.xmonad/config.rasi")
 
     -- Audio keys
     , ((0,                    xF86XK_AudioPlay), spawn "playerctl play-pause")
