@@ -366,7 +366,7 @@ myStartupHook = do
   spawnOnce "numlockx"
   spawnOnce "xmodmap ~/.Xmodmap"
   -- spawnOnce "nvidia-settings &"
-  spawnOnce "slack"
+  spawnOnce "slack -u"
   spawnOnce "discord --start-minimized"
   spawnOnce "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
 
