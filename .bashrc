@@ -4,8 +4,8 @@ iatest=$(expr index "$-" i)
 if [[ $TERM_PROGRAM != "vscode" ]];
 then
 
-	#fastfetch
-	colorscript -r
+	fastfetch
+	# colorscript -r
 
 fi
 
