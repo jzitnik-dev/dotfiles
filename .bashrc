@@ -1,7 +1,7 @@
 #!/bin/bash
 iatest=$(expr index "$-" i)
 
-if [[ $TERM_PROGRAM != "vscode" ]];
+if [[ $TERM_PROGRAM != "vscode" ]] && [[ $TERM != "xterm-256color" ]];
 then
 
 	fastfetch

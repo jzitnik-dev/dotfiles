@@ -74,7 +74,7 @@ addEWMHFullscreen   = do
 
 -- Clipboard history
 clipboardy :: MonadIO m => m () -- Don't question it 
-clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme ~/.config/rofi/config.rasi"
+clipboardy = spawn "rofi -modi \"\63053 :greenclip print\" -show \"\63053 \" -run-command '{cmd}' -theme .config/rofi.xmonad/config.rasi"
 
 -- FullScreen Support
 toggleFull = withFocused (\windowId -> do
@@ -215,7 +215,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
 
     -- Quit xmonad
-    , ((modm .|. shiftMask, xK_q     ), spawn "rofi -show power-menu -modi power-menu:~/bin/rofi-power-menu")
+    , ((modm .|. shiftMask, xK_q     ), spawn "rofi -show power-menu -modi power-menu:~/bin/rofi-power-menu -theme .config/rofi.xmonad/config.rasi")
 
     , ((modm,               xK_F2    ), spawn "sleep 0.3 && ~/bin/loadwallpaper")
     
