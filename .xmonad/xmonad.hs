@@ -113,7 +113,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask, xK_o),  spawn "rofi -show run -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. shiftMask, xK_Tab),  spawn "rofi -show window -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. controlMask, xK_e),  spawn "rofi -show emoji -theme .config/rofi.xmonad/config.rasi")
-    , ((modm,               xK_c),  spawn "rofi -show calc -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. shiftMask, xK_s),  spawn "rofi -show ssh -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. controlMask, xK_k),  spawn "~/bin/rofi-kill -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. controlMask, xK_m),  spawn "~/bin/rofi-man -theme .config/rofi.xmonad/config.rasi")
@@ -149,7 +148,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- GAPS!!!
     , ((modm .|. controlMask, xK_g), sendMessage $ ToggleGaps)               -- toggle all gaps
-    , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L,30), (R,30), (U,40), (D,20)]) -- reset the GapSpec
+    , ((modm .|. shiftMask, xK_g), sendMessage $ setGaps [(L,10), (R,10), (U,40), (D,10)]) -- reset the GapSpec
     
     , ((modm .|. controlMask, xK_l), sendMessage $ IncGap 10 L)              -- increment the left-hand gap
     , ((modm .|. shiftMask, xK_l     ), sendMessage $ DecGap 10 L)           -- decrement the left-hand gap
@@ -402,7 +401,7 @@ defaults = def {
 
       -- hooks, layouts
         manageHook = myManageHook, 
-        layoutHook = gaps [(L,30), (R,30), (U,40), (D,20)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ smartBorders $ myLayout,
+        layoutHook = gaps [(L,10), (R,10), (U,40), (D,10)] $ spacingRaw True (Border 10 10 10 10) True (Border 10 10 10 10) True $ smartBorders $ myLayout,
         handleEventHook    = myEventHook,
         logHook            = myLogHook,
         startupHook        = myStartupHook >> addEWMHFullscreen
