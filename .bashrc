@@ -70,6 +70,8 @@ alias rr='curl -s -L https://raw.githubusercontent.com/keroserene/rickrollrc/mas
 alias cat='bat'
 alias vim='nvim'
 alias vi='nvim'
+alias please='sudo'
+alias finger='touch'
 
 #######################################################
 # SPECIAL FUNCTIONS
