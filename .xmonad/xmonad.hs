@@ -226,7 +226,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Change keyboard layout
     , ((modm              , xK_i     ), spawn "bash ~/bin/layout_switch.sh")
-    , ((modm .|. shiftMask, xK_i     ), spawn "bash ~/bin/changelayout")
+    , ((modm .|. shiftMask, xK_i     ), spawn "bash ~/.config/rofi/wifi/wifi.sh")
     , ((modm              , xK_u     ), spawn "notify-send 'Xmodmap!' 'Starting xmodmap.' && xmodmap ~/.Xmodmap")
 
     
