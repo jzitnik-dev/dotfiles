@@ -112,7 +112,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_o     ), spawn "rofi -show drun -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. shiftMask, xK_o),  spawn "rofi -show run -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. shiftMask, xK_Tab),  spawn "rofi -show window -theme .config/rofi.xmonad/config.rasi")
-    , ((modm .|. controlMask, xK_e),  spawn "rofi -show emoji -theme .config/rofi.xmonad/config.rasi")
+    , ((modm .|. controlMask, xK_e),  spawn "rofi -modi 'emoji:rofimoji' -show emoji -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. shiftMask, xK_s),  spawn "rofi -show ssh -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. controlMask, xK_k),  spawn "~/bin/rofi-kill -theme .config/rofi.xmonad/config.rasi")
     , ((modm .|. controlMask, xK_m),  spawn "~/bin/rofi-man -theme .config/rofi.xmonad/config.rasi")
