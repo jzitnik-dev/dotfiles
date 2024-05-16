@@ -1,0 +1,30 @@
+#!/bin/bash
+
+Dir=/cell/
+rofidir="$HOME/.config/rofi"
+theme='style-1'
+
+if [ ! -d "$Dir" ]; then
+  mkdir "$Dir"
+fi
+
+Devices=$(simple-mtpfs -l)
+
+if [ -z "$Devices" ]; then
+  notify-send "No devices found"
+  exit
+else
+  Device=$(echo "$Devices" | rofi -dmenu -theme "${rofidir}/${theme}.rasi" || notify-send "No device selected")
+  Id=${Device%%:*}
+  Name=$(echo "${Device##*: }" | tr -d '/') # Excluding slashes from the device name
+  if [ ! -d "$Dir$Name" ]; then
+    mkdir "$Dir$Name"
+  fi
+fi
+
+if [ ! -n "$(find "$Dir$Name" -maxdepth 0 -empty)" ]; then
+  fusermount -u "$Dir$Name" && notify-send "Android Mount" "Device unmounted"
+else
+  simple-mtpfs --device "$Id" "$Dir$Name" && notify-send "Android Mount" "Device mounted in $Dir$Name"
+fi
+

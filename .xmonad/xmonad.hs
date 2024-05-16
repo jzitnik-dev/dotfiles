@@ -130,7 +130,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((0,                    xF86XK_AudioMute), spawn "~/bin/changevolume mute")
 
     -- Get current window info
-    , ((modm,                    xK_p), sendMessageWithWindowTitle)
+    , ((modm,                    xK_p), spawn "rmtpfs")
 
     -- Screenshot
     , ((0,                    xK_Print), maimcopy)
