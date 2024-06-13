@@ -4,8 +4,9 @@ dir="$HOME/.config/rofi"
 theme='style-1'
 
 ## Run
+cliphist list | \
 rofi \
-    -modi "\63053 :greenclip print" \
-    -show "\63053 " \
-    -run-command '{cmd}' \
-    -theme ${dir}/${theme}.rasi
+  -dmenu \
+  -theme "${dir}/${theme}" | \
+cliphist decode | \
+wl-copy
