@@ -18,12 +18,12 @@
     "bluetooth",
     "network",
   ],
-
   "hyprland/window": {
     "format": "{}",
   },
   "hyprland/workspaces": {
-    "disable-scroll": true,
+    "on-scroll-up": "hyprctl dispatch workspace r-1",
+    "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": true,
     "on-click": "activate",
     "persistent_workspaces": {
