@@ -81,7 +81,7 @@ local plugins = {
 		"ThePrimeagen/harpoon",
 		branch = "harpoon2",
 		dependencies = { "nvim-lua/plenary.nvim" },
-    lazy = false;
+		lazy = false,
 		config = function()
 			local harpoon = require("harpoon")
 
@@ -118,6 +118,10 @@ local plugins = {
 			end)
 		end,
 	},
+  {
+    "ThePrimeagen/vim-be-good",
+    lazy = false,
+  }
 }
 
 return plugins
