@@ -26,7 +26,7 @@
     "on-scroll-down": "hyprctl dispatch workspace r+1",
     "all-outputs": true,
     "on-click": "activate",
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
