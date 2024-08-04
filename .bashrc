@@ -38,7 +38,7 @@ if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 export EDITOR=nvim
 export VISUAL=nvim
 
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 export vscodium="code"
 
 
@@ -72,6 +72,7 @@ alias vim='nvim'
 alias vi='nvim'
 alias please='sudo'
 alias finger='touch'
+alias mounter='mounter --sudo'
 
 #######################################################
 # SPECIAL FUNCTIONS

@@ -1,4 +1,5 @@
 # Just my personal scripts that i dont want in the github repo
-
-mountnas
 custom*
+
+# Binary containing https://github.com/JZITNIK-github/mounter
+mounter
