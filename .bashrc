@@ -72,7 +72,6 @@ alias vim='nvim'
 alias vi='nvim'
 alias please='sudo'
 alias finger='touch'
-alias mounter='mounter --sudo'
 
 #######################################################
 # SPECIAL FUNCTIONS
