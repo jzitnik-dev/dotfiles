@@ -11,6 +11,7 @@
   "modules-right": [
     "tray",
     "custom/updates",
+    "hyprland/language",
     "battery",
     "backlight",
     "pulseaudio",
@@ -18,6 +19,11 @@
     "bluetooth",
     "network",
   ],
+  "hyprland/language": {
+      "format-cs": "CZ",
+      "format-en": "US",
+      "format-en-dvorak": "US Dvorak"
+  },
   "hyprland/window": {
     "format": "{}",
   },
