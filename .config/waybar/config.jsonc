@@ -20,9 +20,9 @@
     "network",
   ],
   "hyprland/language": {
-      "format-cs": "CZ",
-      "format-en": "US",
-      "format-en-dvorak": "US Dvorak"
+    "format-cs": "CZ",
+    "format-en": "US",
+    "format": "{}"
   },
   "hyprland/window": {
     "format": "{}",
