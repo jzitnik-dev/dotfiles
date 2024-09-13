@@ -22,7 +22,7 @@
   "hyprland/language": {
     "format-cs": "CZ",
     "format-en": "US",
-    "format": "{}"
+    "format-cz-dvorak-ucw": "Pepa"
   },
   "hyprland/window": {
     "format": "{}",
