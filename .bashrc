@@ -77,7 +77,6 @@ alias finger='touch'
 # SPECIAL FUNCTIONS
 #######################################################
 
-# Use the best version of pico installed
 edit ()
 {
 	nvim "$@"
