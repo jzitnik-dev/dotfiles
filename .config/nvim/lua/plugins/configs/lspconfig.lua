@@ -64,4 +64,9 @@ require("lspconfig").lua_ls.setup {
   },
 }
 
+require("lspconfig").jdtls.setup {
+  on_attach = M.on_attach,
+  capabilities = M.capabilities,
+}
+
 return M

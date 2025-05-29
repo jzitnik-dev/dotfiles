@@ -40,7 +40,7 @@ local plugins = {
 		"neovim/nvim-lspconfig",
 
 		dependencies = {
-			"jose-elias-alvarez/null-ls.nvim",
+			"nvimtools/none-ls.nvim",
 			config = function()
 				require("custom.configs.null-ls")
 			end,
@@ -118,38 +118,43 @@ local plugins = {
 			end)
 		end,
 	},
-  {
-    "ThePrimeagen/vim-be-good",
+	{
+		"ThePrimeagen/vim-be-good",
+		lazy = false,
+	},
+	{
+		"andweeb/presence.nvim",
+		lazy = false,
+		config = function()
+			require("presence").setup({
+				-- General options
+				auto_update = true,
+				neovim_image_text = "The One True Text Editor",
+				main_image = "neovim",
+				log_level = nil,
+				debounce_timeout = 10,
+				enable_line_number = false,
+				blacklist = {},
+				buttons = true,
+				file_assets = {},
+				show_time = true,
+
+				-- Rich Presence text options
+				editing_text = "Editing %s",
+				file_explorer_text = "Browsing %s",
+				git_commit_text = "Committing changes",
+				plugin_manager_text = "Managing plugins",
+				reading_text = "Reading %s",
+				workspace_text = "Working on %s",
+				line_number_text = "Line %s out of %s",
+			})
+		end,
+	},
+
+{
+    "nvim-java/nvim-java",
     lazy = false,
   },
-  {
-    "andweeb/presence.nvim",
-    lazy = false,
-    config = function ()
-      require("presence").setup({
-          -- General options
-          auto_update         = true,
-          neovim_image_text   = "The One True Text Editor",
-          main_image          = "neovim",
-          log_level           = nil,
-          debounce_timeout    = 10,
-          enable_line_number  = false,
-          blacklist           = {},
-          buttons             = true,
-          file_assets         = {},
-          show_time           = true,
-
-          -- Rich Presence text options
-          editing_text        = "Editing %s",
-          file_explorer_text  = "Browsing %s",
-          git_commit_text     = "Committing changes",
-          plugin_manager_text = "Managing plugins",
-          reading_text        = "Reading %s",
-          workspace_text      = "Working on %s",
-          line_number_text    = "Line %s out of %s",
-      })
-    end
-  }
 }
 
 return plugins

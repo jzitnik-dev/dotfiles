@@ -237,16 +237,34 @@ local default_plugins = {
     opts = function()
       return require "plugins.configs.telescope"
     end,
-    config = function(_, opts)
-      dofile(vim.g.base46_cache .. "telescope")
-      local telescope = require "telescope"
-      telescope.setup(opts)
+config = function(_, opts)
+  dofile(vim.g.base46_cache .. "telescope")
 
-      -- load extensions
-      for _, ext in ipairs(opts.extensions_list) do
-        telescope.load_extension(ext)
-      end
-    end,
+  local telescope = require("telescope")
+  local utils = require("telescope.previewers.utils")
+
+  -- Patch previewer highlighter to safely handle unsupported languages like "text"
+  utils.highlighter = function(bufnr, ft)
+    local ok = pcall(function()
+      require("vim.treesitter.highlighter").new {
+        language_tree = vim.treesitter.get_parser(bufnr, ft),
+        bufnr = bufnr,
+      }
+    end)
+
+    if not ok then
+      -- fallback to regex highlighting
+      vim.bo[bufnr].syntax = ft
+    end
+  end
+
+  telescope.setup(opts)
+
+  -- load extensions
+  for _, ext in ipairs(opts.extensions_list) do
+    telescope.load_extension(ext)
+  end
+end,
   },
 
   -- Only load whichkey after all the gui
