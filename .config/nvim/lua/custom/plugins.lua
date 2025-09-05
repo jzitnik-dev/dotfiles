@@ -151,7 +151,7 @@ local plugins = {
 		end,
 	},
 
-{
+  {
     "nvim-java/nvim-java",
     lazy = false,
   },

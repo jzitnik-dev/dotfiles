@@ -183,3 +183,5 @@ fi
 
 
 rm -rf ~/.temp_session/*
+
+export ANDROID_HOME=$HOME/Android/Sdk
