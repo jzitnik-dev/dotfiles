@@ -123,6 +123,6 @@
     "format-linked": "{ifname} 󰈀",
     "format-disconnected": "󰤫",
     "tooltip-format": "{ifname} via {gwaddr}",
-    "on-click": "~/.config/rofi/wifi/wifi.sh",
+    "on-click": "alacritty --command impala",
   },
 }

@@ -13,4 +13,10 @@ local options = {
   indent = { enable = true },
 }
 
+vim.filetype.add({
+  extension = {
+    hujson = "jsonc",
+  },
+})
+
 return options
