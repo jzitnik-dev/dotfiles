@@ -19,3 +19,11 @@ end
 dofile(vim.g.base46_cache .. "defaults")
 vim.opt.rtp:prepend(lazypath)
 require "plugins"
+
+vim.api.nvim_create_autocmd("VimEnter", {
+    callback = function() os.execute("tmux set status off") end
+})
+
+vim.api.nvim_create_autocmd("VimLeave", {
+    callback = function() os.execute("tmux set status on") end
+})
