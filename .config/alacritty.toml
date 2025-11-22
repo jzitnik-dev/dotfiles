@@ -1,4 +1,8 @@
-live_config_reload = true
+[terminal]
+[terminal.shell]
+program = "/bin/sh"
+args = ["-lc", "exec tmux new-session -s alacritty-$$"]
+
 
 [colors.primary]
 background = '#0E1415'
@@ -74,3 +78,6 @@ opacity = 0.7
 [window.padding]
 x = 25
 y = 25
+
+[general]
+live_config_reload = true
