@@ -1,7 +1,6 @@
 [terminal]
 [terminal.shell]
-program = "/bin/sh"
-args = ["-lc", "exec tmux new-session -s alacritty-$$"]
+program = "/usr/bin/fish"
 
 
 [colors.primary]

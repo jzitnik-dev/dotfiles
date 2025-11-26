@@ -14,3 +14,8 @@ cp bash.command-not-found /etc
 
 cp .tmux.conf ~/.tmux.conf
 cp .tmux.conf.local ~/.tmux.conf.local
+
+# This needs sudo so asking for it
+# Sorry if you use doas
+sudo mv /etc/xdg/swayosd /etc/xdg/swayosd.bak
+sudo cp -r ./swayosd /etc/xdg/swayosd
