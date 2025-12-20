@@ -61,20 +61,26 @@ tooltip {
 #tray,
 #bluetooth,
 #backlight {
-  background: #1e1e2e;
+  background: #000000;
+  border-color: #1A1A1A;
+  border-style: solid;
   padding: 0px 10px;
   margin: 3px 0px;
   margin-top: 10px;
+  border-width: 1px;
+  color: #E0E0E0;
+}
+
+#language {
+  border-left: 0px;
+  border-right: 0px;
 }
 
 #clock {
-  color: #fab387;
   border-radius: 10px 10px 10px 10px;
   margin-left: 5px;
-  border-right: 0px;
 }
 #workspaces {
-  background: #1e1e2e;
   border-radius: 10px;
   margin-left: 10px;
   padding-right: 0px;
@@ -93,16 +99,13 @@ tooltip {
 }
 
 #custom-updates {
-  color: #f5c2e7;
   border-radius: 10px 0px 0px 10px;
-  border-left: 0px;
   border-right: 0px;
 }
 
 #battery {
   border-left: 0px;
   border-right: 0px;
-  color: #a6e3a1;
 }
 
 #backlight {
@@ -111,25 +114,21 @@ tooltip {
 }
 
 #pulseaudio {
-  color: #89b4fa;
   border-left: 0px;
   border-right: 0px;
 }
 
 #pulseaudio.microphone {
-  color: #cba6f7;
   border-left: 0px;
   border-right: 0px;
 }
 
 #bluetooth {
-  color: #89b4fa;
   border-left: 0px;
   border-right: 0px;
 }
 
 #network {
-  color: #f9e2af;
   border-radius: 0px 10px 10px 0px;
   border-left: 0px;
   border-right: 0px;

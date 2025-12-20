@@ -4,7 +4,7 @@ program = "/usr/bin/fish"
 
 
 [colors.primary]
-background = '#0E1415'
+background = '#101010'
 foreground = '#CECECE'
 
 [colors.cursor]

@@ -13,7 +13,6 @@
     "custom/updates",
     "hyprland/language",
     "battery",
-    "backlight",
     "pulseaudio",
     "pulseaudio#microphone",
     "bluetooth",
