@@ -1,34 +1,25 @@
-local none_ls = require("null-ls")
+local null_ls = require("null-ls")
+local formatting = null_ls.builtins.formatting
+local diagnostics = null_ls.builtins.diagnostics
 
-none_ls.setup({
-  formatters = {
-    prettier = {
-      command = "prettier",
-      args = { "--stdin-filepath", "$FILENAME" },
-      filetypes = { "javascript", "typescript", "css", "html", "json", "markdown" },
+local sources = {
+  formatting.prettier.with({
+    filetypes = {
+      "javascript",
+      "typescript",
+      "typescriptreact",
+      "javascriptreact",
+      "css",
+      "html",
+      "json",
+      "markdown",
     },
-    stylua = {
-      command = "stylua",
-      args = { "-" },
-      filetypes = { "lua" },
-    },
-    rustfmt = {
-      command = "rustfmt",
-      args = { "--emit=stdout" },
-      filetypes = { "rust" },
-    },
-  },
+  }),
+  formatting.stylua,
+  formatting.rustfmt,
+  -- diagnostics.shellcheck,
+}
 
-  linters = {
-    shellcheck = {
-      command = "shellcheck",
-      args = { "--format=gcc", "-" },
-      filetypes = { "sh", "bash" },
-      parse_stderr = false,
-      offset_line = 0,
-      offset_column = 0,
-      source = "shellcheck",
-      severity = "warning",
-    },
-  },
+null_ls.setup({
+  sources = sources,
 })
