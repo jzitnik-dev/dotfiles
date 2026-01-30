@@ -41,6 +41,7 @@ local plugins = {
 
 		dependencies = {
 			"nvimtools/none-ls.nvim",
+			"nvimtools/none-ls-extras.nvim",
 			config = function()
 				require("custom.configs.null-ls")
 			end,
@@ -67,6 +68,7 @@ local plugins = {
 				"prettier",
 				"stylua",
 				"rust-analyzer",
+				"rustfmt",
 				"pyright",
 				"typescript-language-server",
 				"vue-language-server",

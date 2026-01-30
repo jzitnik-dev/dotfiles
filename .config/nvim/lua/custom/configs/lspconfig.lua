@@ -11,7 +11,13 @@ local servers = {
 for _, lsp in ipairs(servers) do
     -- For all other LSPs
     lspconfig[lsp].setup {
-      on_attach = on_attach,
+      on_attach = function(client, bufnr)
+        on_attach(client, bufnr)
+        if lsp == "rust_analyzer" then
+          client.server_capabilities.documentFormattingProvider = true
+          client.server_capabilities.documentRangeFormattingProvider = true
+        end
+      end,
       capabilities = capabilities,
     }
 end

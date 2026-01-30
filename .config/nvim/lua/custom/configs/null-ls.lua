@@ -16,7 +16,7 @@ local sources = {
     },
   }),
   formatting.stylua,
-  formatting.rustfmt,
+  -- formatting.rustfmt,
   -- diagnostics.shellcheck,
 }
 
