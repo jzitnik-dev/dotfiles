@@ -38,7 +38,7 @@ if [[ $iatest -gt 0 ]]; then bind "set show-all-if-ambiguous On"; fi
 export EDITOR=nvim
 export VISUAL=nvim
 
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/.cargo/bin"
+export PATH="$PATH:$HOME/.dotfiles/bin:$HOME/.local/bin:$HOME/.cargo/bin"
 export vscodium="code"
 
 
@@ -184,4 +184,4 @@ fi
 
 rm -rf ~/.temp_session/*
 
-export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_HOME=$HOME/.Android/Sdk

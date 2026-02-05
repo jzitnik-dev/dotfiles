@@ -33,7 +33,7 @@ set -x EDITOR nvim
 set -x VISUAL nvim
 
 # PATH additions
-set -x PATH $PATH $HOME/bin $HOME/.local/bin $HOME/.cargo/bin
+set -x PATH $PATH $HOME/.dotfiles/bin $HOME/.local/bin $HOME/.cargo/bin
 
 # Custom env vars
 set -x vscodium code
