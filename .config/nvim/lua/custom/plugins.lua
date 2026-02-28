@@ -76,6 +76,7 @@ local plugins = {
 				"clangd",
 				"markdownlint",
 				"tailwindcss-language-server",
+        "texlab",
 			},
 		},
 	},
@@ -157,6 +158,37 @@ local plugins = {
     "nvim-java/nvim-java",
     lazy = false,
   },
+
+  {
+    "lervag/vimtex",
+    lazy = false,
+    init = function()
+      vim.g.vimtex_view_method = 'zathura_simple'
+
+      vim.g.vimtex_compiler_latexmk = {
+        out_dir = "build",
+        options = {
+          '-pdf',
+          '-shell-escape',
+          '-verbose',
+          '-file-line-error',
+          '-synctex=1',
+        }
+      }
+
+      -- Mappings
+      local km = vim.keymap.set
+      km("n", "<localleader>ll", vim.cmd.VimtexCompile, { desc = "VimtexCompile" })
+      km("n", "<localleader>lv", vim.cmd.VimtexView, { desc = "VimtexView" })
+      km("n", "<localleader>lc", vim.cmd.VimtexCompileSS, { desc = "VimtexCompileSS" })
+      km("n", "<localleader>le", vim.cmd.VimtexErrors, { desc = "VimtexErrors" })
+      km("n", "<localleader>lo", vim.cmd.VimtexOutput, { desc = "VimtexOutput" })
+      km("n", "<localleader>ls", vim.cmd.VimtexStop, { desc = "VimtexStop" })
+      km("n", "<localleader>lS", vim.cmd.VimtexStopAll, { desc = "VimtexStopAll" })
+      km("n", "<localleader>li", vim.cmd.VimtexInfo, { desc = "VimtexInfo" })
+      km("n", "<localleader>lT", vim.cmd.VimtexTocOpen, { desc = "VimtexTocOpen" })
+    end,
+  }
 }
 
 return plugins

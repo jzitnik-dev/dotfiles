@@ -1,6 +1,7 @@
 -- Configs
 vim.opt.colorcolumn = "80"
 vim.wo.relativenumber = true
+vim.g.maplocalleader = ","
 
 -- Shortcuts
 vim.api.nvim_set_keymap("n", "<leader>mp", ":MarkdownPreview<CR>", { noremap = true, silent = true })
