@@ -6,5 +6,5 @@ theme='style-1'
 ## Run
 rofi \
     -show rofi-sound \
-    -modi rofi-sound:~/bin/rofi-sound-output-chooser \
+    -modi rofi-sound:~/.dotfiles/bin/rofi-sound-output-chooser \
     -theme ${dir}/${theme}.rasi
