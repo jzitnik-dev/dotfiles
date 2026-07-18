@@ -186,6 +186,6 @@ rm -rf ~/.temp_session
 mkdir -p ~/.temp_session
 
 # Android SDK
-set -x ANDROID_HOME $HOME/Android/Sdk
+set -x ANDROID_HOME $HOME/.Android/Sdk
 
 set -g fish_greeting ""
