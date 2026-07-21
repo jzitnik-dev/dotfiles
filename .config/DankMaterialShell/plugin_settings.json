@@ -1,0 +1,40 @@
+{
+  "emojiLauncher": {
+    "enabled": true,
+    "recentEmojis": "😏"
+  },
+  "calculator": {
+    "enabled": true,
+    "trigger": "="
+  },
+  "audioPortSwitcher": {
+    "enabled": true,
+    "language": "en"
+  },
+  "dankTranslate": {
+    "enabled": true
+  },
+  "dmsLenovoBatterySettings": {
+    "enabled": true,
+    "refreshInterval": 5
+  },
+  "dankObsidian": {
+    "enabled": true,
+    "isFlatpak": false,
+    "trigger": "\\obs"
+  },
+  "batteryPlus": {
+    "enabled": true,
+    "timespanHours": 12
+  },
+  "displayProfile": {
+    "enabled": true
+  },
+  "tlpPowerProfile": {
+    "enabled": false,
+    "activeProfileId": "power_save"
+  },
+  "tailscale": {
+    "enabled": true
+  }
+}

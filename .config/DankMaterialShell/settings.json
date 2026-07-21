@@ -2,7 +2,14 @@
   "currentThemeName": "custom",
   "currentThemeCategory": "registry",
   "customThemeFile": "/home/kuba/.config/DankMaterialShell/themes/amoledBlack/theme.json",
-  "registryThemeVariants": {},
+  "registryThemeVariants": {
+    "amoledBlack": {
+      "dark": {
+        "flavor": "black",
+        "accent": "white"
+      }
+    }
+  },
   "matugenScheme": "scheme-tonal-spot",
   "matugenContrast": 0,
   "runUserMatugenTemplates": true,
@@ -15,14 +22,14 @@
   "widgetColorMode": "default",
   "controlCenterTileColorMode": "primary",
   "buttonColorMode": "primary",
-  "cornerRadius": 12,
+  "cornerRadius": 10,
   "niriLayoutGapsOverride": -1,
   "niriLayoutRadiusOverride": -1,
   "niriLayoutBorderSize": -1,
-  "hyprlandLayoutGapsOverride": -1,
+  "hyprlandLayoutGapsOverride": 4,
   "hyprlandLayoutGapsOutOverride": -1,
   "hyprlandLayoutRadiusOverride": -1,
-  "hyprlandLayoutBorderSize": -1,
+  "hyprlandLayoutBorderSize": 0,
   "hyprlandResizeOnBorder": false,
   "mangoLayoutGapsOverride": -1,
   "mangoLayoutGapsOutOverride": -1,
@@ -60,6 +67,7 @@
   "blurEnabled": false,
   "blurForegroundLayers": true,
   "blurLayerOutlineOpacity": 0.12,
+  "blurBorderEnabled": true,
   "blurBorderColor": "outline",
   "blurBorderCustomColor": "#ffffff",
   "blurBorderOpacity": 0.35,
@@ -241,11 +249,8 @@
   "greeterFontFamily": "",
   "greeterWallpaperFillMode": "",
   "greeterPamExternallyManaged": false,
-  "greeterSyncPending": true,
-  "greeterSyncBaseline": {
-    "clockFormat": "auto",
-    "showSeconds": false
-  },
+  "greeterSyncPending": false,
+  "greeterSyncBaseline": {},
   "mediaSize": 1,
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
@@ -468,6 +473,7 @@
   "notificationOverlayEnabled": false,
   "notificationPopupShadowEnabled": true,
   "notificationPopupPrivacyMode": false,
+  "notificationForegroundLayers": true,
   "modalDarkenBackground": true,
   "lockScreenShowPowerActions": true,
   "lockScreenShowSystemIcons": true,
@@ -485,6 +491,8 @@
   "lockPamPath": "",
   "lockPamInlineFprint": false,
   "lockPamInlineU2f": false,
+  "lockPamExternallyManaged": false,
+  "lockU2fPamPath": "",
   "lockScreenInactiveColor": "#000000",
   "lockScreenNotificationMode": 0,
   "lockScreenVideoEnabled": false,
@@ -546,8 +554,8 @@
   "updaterCustomCommand": "",
   "updaterTerminalAdditionalParams": "",
   "updaterIntervalSeconds": 1800,
-  "updaterIncludeFlatpak": true,
-  "updaterAllowAUR": true,
+  "updaterIncludeFlatpak": false,
+  "updaterAllowAUR": false,
   "updaterIgnoredPackages": [],
   "displayNameMode": "system",
   "screenPreferences": {
@@ -555,9 +563,13 @@
   },
   "showOnLastDisplay": {},
   "niriOutputSettings": {},
-  "hyprlandOutputSettings": {},
+  "hyprlandOutputSettings": {
+    "HDMI-A-1": {}
+  },
   "displayProfiles": {},
-  "activeDisplayProfile": {},
+  "activeDisplayProfile": {
+    "hyprland": "profile_1784650820618_oz68nkq"
+  },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
   "displaySnapToEdge": true,
@@ -574,16 +586,43 @@
       "showOnLastDisplay": true,
       "leftWidgets": [
         "workspaceSwitcher",
-        "focusedWindow"
+        {
+          "id": "focusedWindow",
+          "enabled": true,
+          "focusedWindowCompactMode": false
+        }
       ],
       "centerWidgets": [
-        "music",
-        "clock"
+        {
+          "id": "music",
+          "enabled": true,
+          "mediaSize": 2
+        },
+        {
+          "id": "clock",
+          "enabled": true,
+          "clockCompactMode": false
+        }
       ],
       "rightWidgets": [
         "systemTray",
-        "battery",
-        "controlCenterButton",
+        {
+          "id": "tailscale",
+          "enabled": true
+        },
+        {
+          "id": "batteryPlus",
+          "enabled": true
+        },
+        {
+          "id": "controlCenterButton",
+          "enabled": true,
+          "showBrightnessIcon": false,
+          "showMicIcon": true,
+          "showMicPercent": false,
+          "showPrinterIcon": true,
+          "showBrightnessPercent": false
+        },
         "notificationButton"
       ],
       "spacing": 4,

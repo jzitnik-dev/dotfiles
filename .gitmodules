@@ -1,0 +1,21 @@
+[submodule ".config/DankMaterialShell/plugins/batteryPlus"]
+	path = .config/DankMaterialShell/plugins/batteryPlus
+	url = https://github.com/arcatva/dms-battery-plus
+[submodule ".config/DankMaterialShell/plugins/calculator"]
+	path = .config/DankMaterialShell/plugins/calculator
+	url = https://github.com/rochacbruno/DankCalculator
+[submodule ".config/DankMaterialShell/plugins/dankObsidian"]
+	path = .config/DankMaterialShell/plugins/dankObsidian
+	url = https://github.com/Samoggino/dankObsidian
+[submodule ".config/DankMaterialShell/plugins/dankTranslate"]
+	path = .config/DankMaterialShell/plugins/dankTranslate
+	url = https://github.com/alcxyz/DankTranslate
+[submodule ".config/DankMaterialShell/plugins/displayProfile"]
+	path = .config/DankMaterialShell/plugins/displayProfile
+	url = https://github.com/EienWolf/dms-displayprofile
+[submodule ".config/DankMaterialShell/plugins/emojiLauncher"]
+	path = .config/DankMaterialShell/plugins/emojiLauncher
+	url = https://github.com/devnullvoid/dms-emoji-launcher
+[submodule ".config/DankMaterialShell/plugins/tailscale"]
+	path = .config/DankMaterialShell/plugins/tailscale
+	url = https://github.com/cglavin50/dms-tailscale

@@ -1,0 +1,62 @@
+{
+  "show_labs_settings": true,
+  "features": {
+    "feature_custom_themes": true
+  },
+  "setting_defaults": {
+    "custom_themes": [
+      {
+        "name": "AMOLED Pitch Black",
+        "is_dark": true,
+        "colors": {
+          "accent-color": "#ffffff",
+          "primary-color": "#ffffff",
+          "warning-color": "#ff5555",
+          
+          "background-color": "#000000",
+          "primary-background-color": "#000000",
+          "secondary-background-color": "#000000",
+          "tertiary-background-color": "#000000",
+          "quaternary-background-color": "#000000",
+          
+          "sidebar-color": "#000000",
+          "spacePanel-bg-color": "#000000",
+          "roomlist-background-color": "#000000",
+          "rightpanel-background-color": "#000000",
+          "dark-panel-bg-color": "#000000",
+          "header-panel-bg-color": "#000000",
+          "topleftmenu-background-color": "#000000",
+          "panel-actions-tab-bg-color": "#000000",
+          
+          "card-background-color": "#000000",
+          "menu-background-color": "#000000",
+          "menu-bg-color": "#000000",
+          "dialog-background-color": "#000000",
+          "modal-background-color": "#000000",
+          "system-alert-bg-color": "#000000",
+          
+          "cpd-color-bg-canvas-default": "#000000",
+          "cpd-color-bg-canvas-subtle": "#000000",
+          "cpd-color-bg-subtle-primary": "#000000",
+          "cpd-color-bg-subtle-secondary": "#000000",
+          "cpd-color-bg-subtle-tertiary": "#000000",
+          "cpd-color-bg-surface-default": "#000000",
+          "cpd-color-bg-surface": "#000000",
+          
+          "primary-text-color": "#ffffff",
+          "secondary-text-color": "#a6a6a6",
+          "roomlist-text-color": "#ffffff",
+          "roomlist-text-secondary-color": "#a6a6a6",
+          "roomlist-highlights-color": "#121212",
+          "roomlist-separator-color": "#1a1a1a",
+          
+          "timeline-background-color": "#000000",
+          "timeline-text-color": "#ffffff",
+          "timeline-text-secondary-color": "#a6a6a6",
+          "timeline-text-muted-color": "#555555",
+          "timeline-highlights-color": "#121212"
+        }
+      }
+    ]
+  }
+}

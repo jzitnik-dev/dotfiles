@@ -1,0 +1,6 @@
+hl.env("XDG_SESSION_TYPE", "wayland")
+hl.env("ELECTRON_OZONE_PLATFORM_HINT", "auto")
+hl.env("GRIMBLAST_EDITOR", "swappy -f")
+hl.env("MOZ_ENABLE_WAYLAND", "1")
+hl.env("MOZ_WEBRENDER", "1")
+hl.env("MOZ_ACCELERATED", "1")
