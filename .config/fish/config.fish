@@ -134,7 +134,7 @@ function up
     set -l limit $argv[1]
     set -l path ""
     for i in (seq $limit)
-        set path $path/..
+        set path "$path../"
     end
     cd $path
 end
@@ -189,3 +189,7 @@ mkdir -p ~/.temp_session
 set -x ANDROID_HOME $HOME/.Android/Sdk
 
 set -g fish_greeting ""
+
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/kuba/.local/bin" $PATH

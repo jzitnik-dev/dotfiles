@@ -185,3 +185,7 @@ fi
 rm -rf ~/.temp_session/*
 
 export ANDROID_HOME=$HOME/.Android/Sdk
+
+
+# Added by Antigravity CLI installer
+export PATH="/home/kuba/.local/bin:$PATH"

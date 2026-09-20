@@ -1,7 +1,7 @@
 {
   "emojiLauncher": {
     "enabled": true,
-    "recentEmojis": "😏"
+    "recentEmojis": "💀,👍,🤓,😭,🙏,👕,😏"
   },
   "calculator": {
     "enabled": true,
@@ -25,7 +25,7 @@
   },
   "batteryPlus": {
     "enabled": true,
-    "timespanHours": 12
+    "timespanHours": 24
   },
   "displayProfile": {
     "enabled": true

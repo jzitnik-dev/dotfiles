@@ -304,7 +304,7 @@
       "enabled": true
     }
   ],
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconThemeDark": "System Default",
   "iconThemeLight": "System Default",
   "iconThemePerMode": false,
@@ -479,7 +479,7 @@
   "lockScreenShowSystemIcons": true,
   "lockScreenShowTime": true,
   "lockScreenShowDate": true,
-  "lockScreenShowProfileImage": true,
+  "lockScreenShowProfileImage": false,
   "lockScreenShowPasswordField": true,
   "lockScreenShowMediaPlayer": true,
   "lockScreenPowerOffMonitorsOnLock": false,
@@ -568,7 +568,7 @@
   },
   "displayProfiles": {},
   "activeDisplayProfile": {
-    "hyprland": "profile_1784650820618_oz68nkq"
+    "hyprland": "profile_1784650626413_l1u2gtd"
   },
   "displayProfileAutoSelect": false,
   "displayShowDisconnected": false,
@@ -585,7 +585,10 @@
       ],
       "showOnLastDisplay": true,
       "leftWidgets": [
-        "workspaceSwitcher",
+        {
+          "id": "workspaceSwitcher",
+          "enabled": true
+        },
         {
           "id": "focusedWindow",
           "enabled": true,
