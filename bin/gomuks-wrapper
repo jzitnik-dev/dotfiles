@@ -1,0 +1,51 @@
+#!/bin/bash
+
+# Nastavení cesty a kontrolní IP
+GOMUKS_BIN="$HOME/.local/bin/gomuks"
+CHECK_IP="1.1.1.1"
+
+# Kontrola, zda existuje binárka
+if [ ! -x "$GOMUKS_BIN" ]; then
+    echo "Chyba: Soubor $GOMUKS_BIN neexistuje nebo není spustitelný!"
+    exit 1
+fi
+
+# Funkce pro monitorování sítě na pozadí
+monitor_network() {
+    local was_offline=false
+
+    while true; do
+        # Pošle 1 ping. -W 2 znamená timeout 2 sekundy.
+        if ping -c 1 -W 2 $CHECK_IP > /dev/null 2>&1; then
+            # Jsme online
+            if [ "$was_offline" = true ]; then
+                # Internet právě naskočil zpět
+                was_offline=false
+                # Zabijeme proces, aby se mohl restartovat v hlavní smyčce
+                pkill -x gomuks
+            fi
+        else
+            # Nejsme online (ping neprošel)
+            was_offline=true
+        fi
+        # Kontrola každých 5 sekund
+        sleep 5
+    done
+}
+
+# 1. Spustíme hlídání sítě na pozadí a uložíme si jeho PID
+monitor_network &
+MONITOR_PID=$!
+
+# 2. Zajistíme úklid – pokud wrapper ukončíš (např. Ctrl+C), vypne se i hlídač
+trap "kill $MONITOR_PID 2>/dev/null; exit" SIGINT SIGTERM EXIT
+
+# 3. Hlavní nekonečná smyčka
+while true; do
+    # Spuštění samotného klienta
+    "$GOMUKS_BIN"
+    
+    # Gomuks se jakkoliv ukončil (pád, /quit, nebo pkill ze sítě)
+    echo "[Monitor] Gomuks byl ukončen. Restartuji za 1 sekundu... (Pro úplné vypnutí zmáčkni Ctrl+C)"
+    sleep 1
+done
